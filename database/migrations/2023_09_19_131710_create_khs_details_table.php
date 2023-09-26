@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->char('kode_khs_detail', 8);
             $table->char('kode_khs', 8);
-            $table->int('nilai');
+            $table->integer('nilai');
             $table->timestamps();
         });
     }
