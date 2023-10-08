@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\mahasiswaController;
+use App\Http\Controllers\matakuliahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('index');
+});
+Route::get('/Welcome', function () {
     return view('welcome');
 });
+Route::get('/Profil', function () {
+    return view('profile');
+});
+Route::get('/mahasiswa', [mahasiswaController::class, 'index']);
+//     return view('mahasiswa');
+// });
+Route::get('/matakuliah', [matakuliahController::class, 'index']);
