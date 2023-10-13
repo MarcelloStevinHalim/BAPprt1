@@ -61,7 +61,7 @@
         <a href= "/matakuliah">Matakuliah</a>
     </div>
     <div class="content">
-            @yield('content')
+        @yield('content')
     </div>
     <div class="fixed-footer">
         Copyright &copy; 2021
