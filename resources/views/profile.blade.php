@@ -19,7 +19,7 @@
     </style>
 </head>
 
-@section('title', 'Profil')
+@section('title', 'Profile')
 @section ('content')
 <body>
     <h1>Profile</h1>

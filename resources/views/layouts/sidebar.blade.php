@@ -46,9 +46,9 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="/profile" class="nav-link">
-                <i class="nav-icon fas fa-file"></i>
-                <p>Profil</p>
+            <a href="/Profile" class="nav-link">
+                <i class="nav-icon fas fa-user"></i>
+                <p>Profile</p>
             </a>
         </li>
         <li class="nav-item">
@@ -57,6 +57,24 @@
                 <p>Mahasiswa</p>
             </a>
         </li>
+        <li class="nav-item">
+          <a href="/programstudi" class="nav-link">
+              <i class="nav-icon fas fa-user-secret"></i>
+              <p>Program Studi</p>
+          </a>
+      </li>
+      <li class="nav-item">
+        <a href="/pembayaran" class="nav-link">
+            <i class="nav-icon fas fa-user-secret"></i>
+            <p>Pembayaran</p>
+        </a>
+    </li>
+    <li class="nav-item">
+      <a href="/transkripnilai" class="nav-link">
+          <i class="nav-icon fas fa-user-secret"></i>
+          <p>Transkrip Nilai</p>
+      </a>
+    </li>
     </ul>
   </nav>
   <!-- /.sidebar-menu -->

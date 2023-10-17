@@ -36,6 +36,14 @@ class taskSeeder extends Seeder
                 'jurusan' => $faker->address
             ]);
         }
+        for($i = 1; $i <= 50; $i++) {
+            DB::table('users')->insert([
+                'name' =>$faker->name,
+                'email' =>$faker->email,
+                'password' =>$faker->password,
+            ]);
+        }
+
         DB::table ('khs')->insert( [
             ['kode_khs' => 'khs001', 
             'keterangan' => '2022/2023' ,
@@ -64,7 +72,98 @@ class taskSeeder extends Seeder
             'nilai' => 90],
         ]
         );
+        DB::table ('programstudis')->insert( [
+            ['NamaProgramStudi' => 'Sistem Informasi ' ,
+            'Deskripsi' => 'Belajar mengenai Komputer dan Bisnis'],
 
+            ['NamaProgramStudi' => 'Akuntansi ' ,
+            'Deskripsi' => 'Belajar mengenai Laporan Keuangan Akuntansi'],
 
+            ['NamaProgramStudi' => 'Hukum ' ,
+            'Deskripsi' => 'Belajar mengenai Perhukuman'],
+
+            ['NamaProgramStudi' => 'Manajemen ' ,
+            'Deskripsi' => 'Belajar mengenai Manajemen Bisnis'],
+
+            ['NamaProgramStudi' => 'Hospitality ' ,
+            'Deskripsi' => 'Belajar mengenai perhotelan'],
+        ]
+        );
+        
+        DB::table ('pembayarans')->insert( [
+            [
+            'StudentId' => '03081210004' ,
+            'Amount' => '100000.00',
+            'Paymentdate' => '2020-10-20',
+            'Paymentmethod' => 'Cash'],
+
+            [
+            'StudentId_' => '0308123456' ,
+            'Amount' => '100000.00',
+            'Paymentdate' => '2020-10-20',
+            'Paymentmethod' => 'Debit'],
+
+            [
+            'StudentId' => '030812345678' ,
+            'Amount' => '100000.00',
+            'Paymentdate' => '2020-10-20',
+            'Paymentmethod' => 'Kredit'],
+
+            [
+            'StudentId' => '03081210001' ,
+            'Amount' => '100000.00',
+            'Paymentdate' => '2020-10-20',
+            'Paymentmethod' => 'Cash'],
+
+            [
+            'StudentId' => '03081210002' ,
+            'Amount' => '100000.00',
+            'Paymentdate' => '2020-10-20',
+            'Paymentmethod' => 'Debit']
+            ]
+        );
+
+        DB::table ('transkrip_akademiks')->insert( [
+            [ 
+            'StudentID' => '03081210004' ,
+            'Kode_matakuliah' => 'KM001',
+            'Kode_term' => 'T001',
+            'nilai' => 'A',
+            'sks' => '4',
+            'gpa' => '3.7'],
+
+            [
+            'StudentID' => '0308123456' ,
+            'Kode_matakuliah' => 'KM002',
+            'Kode_term' => 'T002',
+            'nilai' => 'B',
+            'sks' => '6',
+            'gpa' => '3.2'],
+
+            [
+            'StudentID' => '030812345678' ,
+            'Kode_matakuliah' => 'KM003',
+            'Kode_term' => 'T003',
+            'nilai' => 'A',
+            'sks' => '3',
+            'gpa' => '3.1'],
+
+            [
+            'StudentID' => '03081210001' ,
+            'Kode_matakuliah' => 'KM004',
+            'Kode_term' => 'T004',
+            'nilai' => 'B',
+            'sks' => '5',
+            'gpa' => '3.4'],
+
+            [
+            'StudentID' => '03081210002' ,
+            'Kode_matakuliah' => 'KM005',
+            'Kode_term' => 'T005',
+            'nilai' => 'A',
+            'sks' => '4',
+            'gpa' => '3.76']
+            ]
+        );
     }
 }

@@ -56,7 +56,7 @@
  <body>
     <div class="fixed-header">
         <a href="/">Home</a>
-        <a href="/Profil">Profil</a>
+        <a href="/Profile">Profile</a>
         <a href="/mahasiswa">Mahasiswa</a>
         <a href= "/matakuliah">Matakuliah</a>
     </div>

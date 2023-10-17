@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\mahasiswaController;
 use App\Http\Controllers\matakuliahController;
+use App\Http\Controllers\ProgramStudiController;
+use App\Http\Controllers\PembayaranController;
+use App\Http\Controllers\TranskripAkademikController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +25,18 @@ Route::get('/', function () {
 Route::get('/Welcome', function () {
     return view('welcome');
 });
-Route::get('/Profil', function () {
+Route::get('Profil', function () {
+    return view('profile');
+});
+Route::get('/Profile', function () {
     return view('profile');
 });
 Route::get('/mahasiswa', [mahasiswaController::class, 'index']);
 //     return view('mahasiswa');
 // });
-Route::get('/matakuliah', [matakuliahController::class, 'index']);
+Route::get('/programstudi', [programstudiController::class, 'index']);
+
+Route::get('/pembayaran', [PembayaranController::class, 'index']);
+
+Route::get('/transkripnilai', [TranskripAkademikController::class, 'index']);
+
