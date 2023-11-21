@@ -6,7 +6,7 @@ use App\Http\Controllers\matakuliahController;
 use App\Http\Controllers\ProgramStudiController;
 use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\TranskripAkademikController;
-
+use App\Http\Controllers\Admin\ItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,4 +39,11 @@ Route::get('/programstudi', [programstudiController::class, 'index']);
 Route::get('/pembayaran', [PembayaranController::class, 'index']);
 
 Route::get('/transkripnilai', [TranskripAkademikController::class, 'index']);
+
+Route :: resource ('admin/item', ItemController ::class); 
+Route :: resource ('mahasiswa/mahasiswa2', ItemController ::class);
+Route :: resource ('matakuliah/matakuliah-marcello', ItemController ::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

@@ -165,5 +165,27 @@ class taskSeeder extends Seeder
             'gpa' => '3.76']
             ]
         );
+        $faker = Faker::create('id_ID');
+ 
+    	for($i = 1; $i <= 50; $i++){
+ 
+    	    // insert data ke table pegawai menggunakan Faker
+    		\DB::table('mahasiswas')->insert([
+                'studentID' => '03000811'&$i,
+    			'nama' => $faker->name,
+                'jurusan' => $faker->address,
+    			'tahunMasuk' => '2021',
+    		]);
+        }
+
+        for($i = 1; $i <= 15; $i++){
+ 
+            // insert data ke table pegawai menggunakan Faker
+          DB::table('users')->insert([
+              'name' => $faker->name,
+              'email' => $faker->email,
+              'password' => $faker->password,
+          ]);
+        }
     }
 }
